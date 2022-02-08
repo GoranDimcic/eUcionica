@@ -98,6 +98,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistryLoginForm\ProfessorLogin.resx">
+      <DependentUpon>ProfessorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryLoginForm\ProfessorRegistry.resx">
+      <DependentUpon>ProfessorRegistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryLoginForm\StudentLogin.resx">
+      <DependentUpon>StudentLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryLoginForm\StudentRegistry.resx">
+      <DependentUpon>StudentRegistry.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -29,12 +29,174 @@ namespace eUcionica.RegistryLoginForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BtnRegistryProfessor = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCountryProfessor = new System.Windows.Forms.TextBox();
+            this.txtAddressProfessor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNameProfessor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPasswordProfessor = new System.Windows.Forms.TextBox();
+            this.txtEmailProfessor = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLoginProfessor = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // BtnRegistryProfessor
+            // 
+            this.BtnRegistryProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistryProfessor.Location = new System.Drawing.Point(215, 350);
+            this.BtnRegistryProfessor.Name = "BtnRegistryProfessor";
+            this.BtnRegistryProfessor.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryProfessor.TabIndex = 45;
+            this.BtnRegistryProfessor.Text = "Sign up";
+            this.BtnRegistryProfessor.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(50, 302);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Country";
+            // 
+            // txtCountryProfessor
+            // 
+            this.txtCountryProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountryProfessor.Location = new System.Drawing.Point(215, 300);
+            this.txtCountryProfessor.Name = "txtCountryProfessor";
+            this.txtCountryProfessor.Size = new System.Drawing.Size(150, 29);
+            this.txtCountryProfessor.TabIndex = 43;
+            // 
+            // txtAddressProfessor
+            // 
+            this.txtAddressProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressProfessor.Location = new System.Drawing.Point(215, 250);
+            this.txtAddressProfessor.Name = "txtAddressProfessor";
+            this.txtAddressProfessor.Size = new System.Drawing.Size(150, 29);
+            this.txtAddressProfessor.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(50, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 25);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "E-mail";
+            // 
+            // txtNameProfessor
+            // 
+            this.txtNameProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameProfessor.Location = new System.Drawing.Point(215, 200);
+            this.txtNameProfessor.Name = "txtNameProfessor";
+            this.txtNameProfessor.Size = new System.Drawing.Size(150, 29);
+            this.txtNameProfessor.TabIndex = 40;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(50, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Name";
+            // 
+            // txtPasswordProfessor
+            // 
+            this.txtPasswordProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordProfessor.Location = new System.Drawing.Point(215, 152);
+            this.txtPasswordProfessor.Name = "txtPasswordProfessor";
+            this.txtPasswordProfessor.Size = new System.Drawing.Size(150, 29);
+            this.txtPasswordProfessor.TabIndex = 38;
+            this.txtPasswordProfessor.UseSystemPasswordChar = true;
+            // 
+            // txtEmailProfessor
+            // 
+            this.txtEmailProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailProfessor.Location = new System.Drawing.Point(215, 100);
+            this.txtEmailProfessor.Name = "txtEmailProfessor";
+            this.txtEmailProfessor.Size = new System.Drawing.Size(150, 29);
+            this.txtEmailProfessor.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 252);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Address";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(50, 152);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(106, 25);
+            this.lblEmail.TabIndex = 35;
+            this.lblEmail.Text = "Password";
+            // 
+            // lblLoginProfessor
+            // 
+            this.lblLoginProfessor.AutoSize = true;
+            this.lblLoginProfessor.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoginProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginProfessor.Location = new System.Drawing.Point(175, 50);
+            this.lblLoginProfessor.Name = "lblLoginProfessor";
+            this.lblLoginProfessor.Size = new System.Drawing.Size(221, 25);
+            this.lblLoginProfessor.TabIndex = 34;
+            this.lblLoginProfessor.Text = "Registry your account";
+            // 
+            // ProfessorRegistry
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.BtnRegistryProfessor);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtCountryProfessor);
+            this.Controls.Add(this.txtAddressProfessor);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtNameProfessor);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPasswordProfessor);
+            this.Controls.Add(this.txtEmailProfessor);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblLoginProfessor);
+            this.Name = "ProfessorRegistry";
             this.Text = "ProfessorRegistry";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button BtnRegistryProfessor;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCountryProfessor;
+        private System.Windows.Forms.TextBox txtAddressProfessor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNameProfessor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPasswordProfessor;
+        private System.Windows.Forms.TextBox txtEmailProfessor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblLoginProfessor;
     }
 }
