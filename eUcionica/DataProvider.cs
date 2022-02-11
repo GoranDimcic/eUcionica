@@ -353,7 +353,7 @@ namespace eUcionica
 
             StudentTest dd = GetStudentTest(test, student);
 
-                var query = Query.EQ("Id", dd.Id);
+            var query = Query.EQ("Id", dd.Id);
 
             dd.Grade = ocena;
 
@@ -361,7 +361,46 @@ namespace eUcionica
 
             studenttestCollection.Update(query, up);
             studenttestCollection.Save(dd);
-            
+
+
+        }
+
+        public void UpdateTest(string name, string answers, string questions)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var collection = db.GetCollection<Test>("tests");
+            // MongoDBRef m1 = new MongoDBRef("izlozbe", izlozba.Id);
+
+            Test dd = GetTest(name);
+
+            dd.Questions = questions;
+            dd.Answers = answers;
+            var query = Query.EQ("Id", dd.Id);
+
+            var up = MongoDB.Driver.Builders.Update.Set("Answers", answers);
+            var up1 = MongoDB.Driver.Builders.Update.Set("Questions", questions);
+
+            collection.Update(query, up);
+            collection.Update(query, up1);
+            collection.Save(dd);
+
+        }
+
+        public void DeleteTest(string name)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var collection = db.GetCollection<Test>("tests");
+
+            Test t = GetTest(name);
+            var query = Query.EQ("Name", name);
+
+            collection.Remove(query);
 
         }
     }
