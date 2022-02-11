@@ -54,17 +54,31 @@
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
     <Compile Include="Entities\Professor.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Test.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreateTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTest.Designer.cs">
+      <DependentUpon>CreateTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProfessorView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ProfessorView.Designer.cs">
       <DependentUpon>ProfessorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentView.Designer.cs">
+      <DependentUpon>StudentView.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistryLoginForm\ProfessorLogin.cs">
       <SubType>Form</SubType>
@@ -94,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTest.resx">
+      <DependentUpon>CreateTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfessorView.resx">
       <DependentUpon>ProfessorView.cs</DependentUpon>

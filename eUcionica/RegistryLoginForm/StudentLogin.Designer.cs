@@ -59,6 +59,7 @@ namespace eUcionica.RegistryLoginForm
             this.BtnLoginAsStudent.TabIndex = 17;
             this.BtnLoginAsStudent.Text = "Login";
             this.BtnLoginAsStudent.UseVisualStyleBackColor = false;
+            this.BtnLoginAsStudent.Click += new System.EventHandler(this.BtnLoginAsStudent_Click);
             // 
             // lblPassword
             // 

@@ -1,5 +1,4 @@
 ﻿using MongoDB.Bson;
-using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace eUcionica.Entities
 {
-    public class Professor
-    {   
+    public class Student
+    {
         public ObjectId Id { get; set; }
 
         public string Name { get; set; }
@@ -17,9 +16,5 @@ namespace eUcionica.Entities
         public string Email { get; set; }
 
         public string Password { get; set; }
-
-        public string Subject { get; set; }
-
-        //public List<MongoDBRef> Subjects { get; set; }
     }
 }

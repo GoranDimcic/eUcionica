@@ -37,7 +37,7 @@ namespace eUcionica.RegistryLoginForm
             return true;
         }
 
-        private void TxtEmailProfessor_KeyDown(object sender, KeyEventArgs e)
+        private void EnterPress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 BtnRegistryProfessor.PerformClick();

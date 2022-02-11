@@ -51,7 +51,7 @@ namespace eUcionica.RegistryLoginForm
             }
         }
 
-        private void TxtEmailLoginProfessor_KeyDown(object sender, KeyEventArgs e)
+        private void EnterPress_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 BtnLoginAsProfessor.PerformClick();

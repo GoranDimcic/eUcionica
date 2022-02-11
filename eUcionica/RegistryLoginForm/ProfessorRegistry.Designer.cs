@@ -70,7 +70,7 @@ namespace eUcionica.RegistryLoginForm
             this.txtNameProfessor.Name = "txtNameProfessor";
             this.txtNameProfessor.Size = new System.Drawing.Size(150, 29);
             this.txtNameProfessor.TabIndex = 7;
-            this.txtNameProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
+            this.txtNameProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // label3
             // 
@@ -91,7 +91,7 @@ namespace eUcionica.RegistryLoginForm
             this.txtPasswordProfessor.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordProfessor.TabIndex = 6;
             this.txtPasswordProfessor.UseSystemPasswordChar = true;
-            this.txtPasswordProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
+            this.txtPasswordProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // txtEmailProfessor
             // 
@@ -100,7 +100,7 @@ namespace eUcionica.RegistryLoginForm
             this.txtEmailProfessor.Name = "txtEmailProfessor";
             this.txtEmailProfessor.Size = new System.Drawing.Size(150, 29);
             this.txtEmailProfessor.TabIndex = 5;
-            this.txtEmailProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
+            this.txtEmailProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // label1
             // 

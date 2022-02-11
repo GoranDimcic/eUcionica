@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eUcionica.Entities;
+using eUcionica.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,41 @@ namespace eUcionica.RegistryLoginForm
 {
     public partial class StudentLogin : Form
     {
+        public Student student = new Student();
+
         public StudentLogin()
         {
             InitializeComponent();
+        }
+
+        private void BtnLoginAsStudent_Click(object sender, EventArgs e)
+        {
+            //DataProvider data = new DataProvider();
+
+            //if (txtEmailLoginStudent.Text == "")
+            //{
+            //    MessageBox.Show("You didn't enter an email, try again!");
+            //}
+            //else if (txtPasswordLoginStudent.Text == "")
+            //{
+            //    MessageBox.Show("You didn't enter a password, try again!");
+            //}
+            //else
+            //{
+            //    student = data.GetProfessor(txtEmailLoginStudent.Text, txtPasswordLoginStudent.Text);
+
+            //    if (student == null)
+            //    {
+            //        MessageBox.Show("Incorrect login, try again!");
+            //        txtEmailLoginStudent.Text = "";
+            //        txtPasswordLoginStudent.Text = "";
+            //    }
+            //    else
+            //    {
+            //        StudentView form = new StudentView(student);
+            //        form.ShowDialog();
+            //    }
+            //}
         }
     }
 }

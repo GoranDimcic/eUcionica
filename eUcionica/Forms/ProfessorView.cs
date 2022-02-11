@@ -20,5 +20,11 @@ namespace eUcionica.Forms
             InitializeComponent();
             loggedProfessor = professor;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CreateTest form = new CreateTest();
+            form.ShowDialog();
+        }
     }
 }

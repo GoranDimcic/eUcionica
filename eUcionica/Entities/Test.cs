@@ -12,12 +12,19 @@ namespace eUcionica.Entities
     {
         public ObjectId Id { get; set; }
 
-        public string Subject { get; set; }
+        public String Questions { get; set; }
 
-        public List<string> Questions { get; set; }
+        public String Answers { get; set; }
 
-        public List<string> Answers { get; set; }
+        public DateTime Date { get; set; }
 
         public MongoDBRef Professor { get; set; }
+
+        public List<MongoDBRef> Students { get; set; }
+
+        public Test()
+        {
+            Students = new List<MongoDBRef>();
+        }
     }
 }
