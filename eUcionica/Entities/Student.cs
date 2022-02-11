@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,12 @@ namespace eUcionica.Entities
         public string Email { get; set; }
 
         public string Password { get; set; }
+
+        public List<MongoDBRef> Tests { get; set; }
+
+        public Student()
+        {
+            Tests = new List<MongoDBRef>();
+        }
     }
 }

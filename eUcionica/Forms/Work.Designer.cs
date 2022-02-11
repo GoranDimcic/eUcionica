@@ -37,6 +37,7 @@ namespace eUcionica.Forms
             this.txtQuestions = new System.Windows.Forms.TextBox();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ComboBoxSubjects
@@ -129,11 +130,22 @@ namespace eUcionica.Forms
             this.label4.TabIndex = 37;
             this.label4.Text = "Answers";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(408, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 59);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Work
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 508);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAnswers);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtQuestions);
@@ -159,5 +171,6 @@ namespace eUcionica.Forms
         private System.Windows.Forms.TextBox txtQuestions;
         private System.Windows.Forms.TextBox txtAnswers;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

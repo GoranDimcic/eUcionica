@@ -14,11 +14,18 @@ namespace eUcionica.Forms
     public partial class Work : Form
     {
         public Student loggedStudent;
+        public Test test;
 
         public Work(Student student)
         {
             InitializeComponent();
             loggedStudent = student;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataProvider data = new DataProvider();
+            data.AddStudentTest(loggedStudent, test, txtAnswers.Text);
         }
 
         public void FillComboBox()
@@ -40,8 +47,9 @@ namespace eUcionica.Forms
             string questions;
 
             questions = data.GetQuestions(comboBox1.SelectedItem.ToString());
-            MessageBox.Show(comboBox1.SelectedItem.ToString());
             txtQuestions.Text = questions;
+
+            test = data.GetTest(comboBox1.SelectedItem.ToString());
         }
 
         private void ComboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)

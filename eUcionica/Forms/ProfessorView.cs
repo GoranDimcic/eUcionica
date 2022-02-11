@@ -26,5 +26,11 @@ namespace eUcionica.Forms
             CreateTest form = new CreateTest(loggedProfessor);
             form.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Grade form = new Grade(loggedProfessor);
+            form.ShowDialog();
+        }
     }
 }
