@@ -43,10 +43,11 @@ namespace eUcionica.RegistryLoginForm
             this.BtnLoginAsProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLoginAsProfessor.Location = new System.Drawing.Point(171, 230);
             this.BtnLoginAsProfessor.Name = "BtnLoginAsProfessor";
-            this.BtnLoginAsProfessor.Size = new System.Drawing.Size(150, 50);
-            this.BtnLoginAsProfessor.TabIndex = 11;
+            this.BtnLoginAsProfessor.Size = new System.Drawing.Size(150, 40);
+            this.BtnLoginAsProfessor.TabIndex = 5;
             this.BtnLoginAsProfessor.Text = "Login";
             this.BtnLoginAsProfessor.UseVisualStyleBackColor = false;
+            this.BtnLoginAsProfessor.Click += new System.EventHandler(this.BtnLoginAsProfessor_Click);
             // 
             // lblPassword
             // 
@@ -57,7 +58,7 @@ namespace eUcionica.RegistryLoginForm
             this.lblPassword.Location = new System.Drawing.Point(16, 177);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(106, 25);
-            this.lblPassword.TabIndex = 10;
+            this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password";
             // 
             // lblEmail
@@ -69,7 +70,7 @@ namespace eUcionica.RegistryLoginForm
             this.lblEmail.Location = new System.Drawing.Point(50, 127);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(72, 25);
-            this.lblEmail.TabIndex = 9;
+            this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "E-mail";
             // 
             // txtPasswordLoginProfessor
@@ -78,8 +79,9 @@ namespace eUcionica.RegistryLoginForm
             this.txtPasswordLoginProfessor.Location = new System.Drawing.Point(171, 175);
             this.txtPasswordLoginProfessor.Name = "txtPasswordLoginProfessor";
             this.txtPasswordLoginProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordLoginProfessor.TabIndex = 8;
+            this.txtPasswordLoginProfessor.TabIndex = 4;
             this.txtPasswordLoginProfessor.UseSystemPasswordChar = true;
+            this.txtPasswordLoginProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginProfessor_KeyDown);
             // 
             // txtEmailLoginProfessor
             // 
@@ -87,7 +89,8 @@ namespace eUcionica.RegistryLoginForm
             this.txtEmailLoginProfessor.Location = new System.Drawing.Point(171, 125);
             this.txtEmailLoginProfessor.Name = "txtEmailLoginProfessor";
             this.txtEmailLoginProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailLoginProfessor.TabIndex = 7;
+            this.txtEmailLoginProfessor.TabIndex = 3;
+            this.txtEmailLoginProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailLoginProfessor_KeyDown);
             // 
             // lblLoginProfessor
             // 

@@ -30,9 +30,6 @@ namespace eUcionica.RegistryLoginForm
         private void InitializeComponent()
         {
             this.BtnRegistryProfessor = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCountryProfessor = new System.Windows.Forms.TextBox();
-            this.txtAddressProfessor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNameProfessor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,44 +38,19 @@ namespace eUcionica.RegistryLoginForm
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginProfessor = new System.Windows.Forms.Label();
+            this.ComboBoxSubjects = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BtnRegistryProfessor
             // 
             this.BtnRegistryProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistryProfessor.Location = new System.Drawing.Point(215, 350);
+            this.BtnRegistryProfessor.Location = new System.Drawing.Point(215, 300);
             this.BtnRegistryProfessor.Name = "BtnRegistryProfessor";
             this.BtnRegistryProfessor.Size = new System.Drawing.Size(150, 50);
-            this.BtnRegistryProfessor.TabIndex = 45;
+            this.BtnRegistryProfessor.TabIndex = 9;
             this.BtnRegistryProfessor.Text = "Sign up";
             this.BtnRegistryProfessor.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 302);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 25);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Country";
-            // 
-            // txtCountryProfessor
-            // 
-            this.txtCountryProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountryProfessor.Location = new System.Drawing.Point(215, 300);
-            this.txtCountryProfessor.Name = "txtCountryProfessor";
-            this.txtCountryProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtCountryProfessor.TabIndex = 43;
-            // 
-            // txtAddressProfessor
-            // 
-            this.txtAddressProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressProfessor.Location = new System.Drawing.Point(215, 250);
-            this.txtAddressProfessor.Name = "txtAddressProfessor";
-            this.txtAddressProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtAddressProfessor.TabIndex = 42;
+            this.BtnRegistryProfessor.Click += new System.EventHandler(this.BtnRegistryProfessor_Click);
             // 
             // label4
             // 
@@ -88,7 +60,7 @@ namespace eUcionica.RegistryLoginForm
             this.label4.Location = new System.Drawing.Point(50, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 25);
-            this.label4.TabIndex = 41;
+            this.label4.TabIndex = 1;
             this.label4.Text = "E-mail";
             // 
             // txtNameProfessor
@@ -97,7 +69,8 @@ namespace eUcionica.RegistryLoginForm
             this.txtNameProfessor.Location = new System.Drawing.Point(215, 200);
             this.txtNameProfessor.Name = "txtNameProfessor";
             this.txtNameProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtNameProfessor.TabIndex = 40;
+            this.txtNameProfessor.TabIndex = 7;
+            this.txtNameProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
             // 
             // label3
             // 
@@ -107,7 +80,7 @@ namespace eUcionica.RegistryLoginForm
             this.label3.Location = new System.Drawing.Point(50, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 25);
-            this.label3.TabIndex = 39;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Name";
             // 
             // txtPasswordProfessor
@@ -116,8 +89,9 @@ namespace eUcionica.RegistryLoginForm
             this.txtPasswordProfessor.Location = new System.Drawing.Point(215, 152);
             this.txtPasswordProfessor.Name = "txtPasswordProfessor";
             this.txtPasswordProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordProfessor.TabIndex = 38;
+            this.txtPasswordProfessor.TabIndex = 6;
             this.txtPasswordProfessor.UseSystemPasswordChar = true;
+            this.txtPasswordProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
             // 
             // txtEmailProfessor
             // 
@@ -125,7 +99,8 @@ namespace eUcionica.RegistryLoginForm
             this.txtEmailProfessor.Location = new System.Drawing.Point(215, 100);
             this.txtEmailProfessor.Name = "txtEmailProfessor";
             this.txtEmailProfessor.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailProfessor.TabIndex = 37;
+            this.txtEmailProfessor.TabIndex = 5;
+            this.txtEmailProfessor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmailProfessor_KeyDown);
             // 
             // label1
             // 
@@ -134,9 +109,9 @@ namespace eUcionica.RegistryLoginForm
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Address";
+            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Subject";
             // 
             // lblEmail
             // 
@@ -146,7 +121,7 @@ namespace eUcionica.RegistryLoginForm
             this.lblEmail.Location = new System.Drawing.Point(50, 152);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(106, 25);
-            this.lblEmail.TabIndex = 35;
+            this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Password";
             // 
             // lblLoginProfessor
@@ -160,15 +135,28 @@ namespace eUcionica.RegistryLoginForm
             this.lblLoginProfessor.TabIndex = 34;
             this.lblLoginProfessor.Text = "Registry your account";
             // 
+            // ComboBoxSubjects
+            // 
+            this.ComboBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxSubjects.FormattingEnabled = true;
+            this.ComboBoxSubjects.Items.AddRange(new object[] {
+            "Srpski",
+            "Matematika",
+            "Engleski",
+            "Fizika",
+            "Hemija"});
+            this.ComboBoxSubjects.Location = new System.Drawing.Point(215, 250);
+            this.ComboBoxSubjects.Name = "ComboBoxSubjects";
+            this.ComboBoxSubjects.Size = new System.Drawing.Size(150, 32);
+            this.ComboBoxSubjects.TabIndex = 8;
+            // 
             // ProfessorRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(484, 411);
+            this.Controls.Add(this.ComboBoxSubjects);
             this.Controls.Add(this.BtnRegistryProfessor);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCountryProfessor);
-            this.Controls.Add(this.txtAddressProfessor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNameProfessor);
             this.Controls.Add(this.label3);
@@ -187,9 +175,6 @@ namespace eUcionica.RegistryLoginForm
         #endregion
 
         private System.Windows.Forms.Button BtnRegistryProfessor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCountryProfessor;
-        private System.Windows.Forms.TextBox txtAddressProfessor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNameProfessor;
         private System.Windows.Forms.Label label3;
@@ -198,5 +183,6 @@ namespace eUcionica.RegistryLoginForm
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginProfessor;
+        private System.Windows.Forms.ComboBox ComboBoxSubjects;
     }
 }
