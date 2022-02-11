@@ -14,6 +14,8 @@ namespace eUcionica.Entities
 
         public String Questions { get; set; }
 
+        public String Name { get; set; }
+
         public String Answers { get; set; }
 
         public DateTime Date { get; set; }

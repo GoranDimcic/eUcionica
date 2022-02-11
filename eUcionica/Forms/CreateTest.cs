@@ -27,7 +27,7 @@ namespace eUcionica.Forms
         {
             DataProvider d = new DataProvider();
 
-            d.AddTest(txtQuestions.Text, txtAnswers.Text, DateTime.Parse(date.Text), loggedProfessor);
+            d.AddTest(txtQuestions.Text, txtAnswers.Text, DateTime.Parse(date.Text), textBox2.Text, loggedProfessor);
         }
     }
 }

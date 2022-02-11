@@ -38,11 +38,13 @@ namespace eUcionica.Forms
             this.date = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAddTest
             // 
-            this.btnAddTest.Location = new System.Drawing.Point(244, 356);
+            this.btnAddTest.Location = new System.Drawing.Point(244, 374);
             this.btnAddTest.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTest.Name = "btnAddTest";
             this.btnAddTest.Size = new System.Drawing.Size(107, 46);
@@ -53,7 +55,7 @@ namespace eUcionica.Forms
             // 
             // txtAnswers
             // 
-            this.txtAnswers.Location = new System.Drawing.Point(347, 108);
+            this.txtAnswers.Location = new System.Drawing.Point(347, 144);
             this.txtAnswers.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnswers.Multiline = true;
             this.txtAnswers.Name = "txtAnswers";
@@ -63,7 +65,7 @@ namespace eUcionica.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 108);
+            this.label4.Location = new System.Drawing.Point(285, 144);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
@@ -72,7 +74,7 @@ namespace eUcionica.Forms
             // 
             // txtQuestions
             // 
-            this.txtQuestions.Location = new System.Drawing.Point(81, 108);
+            this.txtQuestions.Location = new System.Drawing.Point(81, 144);
             this.txtQuestions.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuestions.Multiline = true;
             this.txtQuestions.Name = "txtQuestions";
@@ -82,7 +84,7 @@ namespace eUcionica.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 108);
+            this.label3.Location = new System.Drawing.Point(20, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
@@ -125,11 +127,30 @@ namespace eUcionica.Forms
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 39;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 93);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Name";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(81, 90);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 41;
+            // 
             // CreateTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 450);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnAddTest);
             this.Controls.Add(this.txtAnswers);
@@ -157,5 +178,7 @@ namespace eUcionica.Forms
         private System.Windows.Forms.DateTimePicker date;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -78,7 +78,7 @@ namespace eUcionica
             return query;
         }
 
-        public void AddTest(String questions, String answers, DateTime date, Professor professor)
+        public void AddTest(String questions, String answers, DateTime date, string name, Professor professor)
         {
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
@@ -92,7 +92,8 @@ namespace eUcionica
                 Date = date,
                 Professor = m,
                 Questions = questions,
-                Answers = answers
+                Answers = answers,
+                Name = name
             };
 
             collection.Insert(test);
@@ -102,6 +103,76 @@ namespace eUcionica
             professor.Tests.Add(new MongoDBRef("tests", test.Id));
 
             vcollection.Save(professor);
+        }
+
+        public Professor GetProfessor(string subject)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var professorCollection = db.GetCollection("professors");
+
+            var query = (from Professor in professorCollection.AsQueryable<Professor>()
+                         where Professor.Subject == subject
+                         select Professor).FirstOrDefault();
+
+            return query;
+        }
+
+        public List<Test> GetTests(String subject)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var professorCollection = db.GetCollection("professors");
+            var testCollection = db.GetCollection("tests");
+
+            Professor m = GetProfessor(subject);
+
+            MongoDBRef m1 = new MongoDBRef("professors", m.Id);
+            List<Test> lista = new List<Test>();
+            var query = from Test in testCollection.AsQueryable<Test>()
+                        where Test.Professor == m1
+                        select Test;
+
+            foreach (Test test in query)
+            {
+                lista.Add(test);
+            }
+
+            return lista;
+        }
+
+        public Test GetTest(string name)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var testCollection = db.GetCollection("tests");
+
+            var query1 = (from test in testCollection.AsQueryable<Test>()
+                          where test.Name == name
+                          select test).FirstOrDefault();
+
+            return query1;
+        }
+
+        public String GetQuestions(string name)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+            
+            var testCollection = db.GetCollection("tests");
+
+            var query = (from test in testCollection.AsQueryable<Test>()
+                          where test.Name==name
+                          select test.Questions).FirstOrDefault();
+
+            return query;
         }
     }
 }

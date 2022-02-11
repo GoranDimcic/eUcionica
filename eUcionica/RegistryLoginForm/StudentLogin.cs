@@ -45,7 +45,7 @@ namespace eUcionica.RegistryLoginForm
                 }
                 else
                 {
-                    StudentView form = new StudentView(student);
+                    Work form = new Work(student);
                     form.ShowDialog();
                 }
             }
