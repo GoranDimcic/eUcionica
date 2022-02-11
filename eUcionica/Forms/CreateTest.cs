@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eUcionica.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace eUcionica.Forms
 {
     public partial class CreateTest : Form
     {
-        public CreateTest()
+        public Professor loggedProfessor;
+
+        public CreateTest(Professor professor)
         {
             InitializeComponent();
+            loggedProfessor = professor;
+
+            textBox1.Text = loggedProfessor.Subject;
+        }
+
+        private void btnAddTest_Click(object sender, EventArgs e)
+        {
+            DataProvider d = new DataProvider();
+
+            d.AddTest(txtQuestions.Text, txtAnswers.Text, DateTime.Parse(date.Text), loggedProfessor);
         }
     }
 }

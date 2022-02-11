@@ -93,6 +93,7 @@ namespace eUcionica.RegistryLoginForm
             this.txtPasswordLoginStudent.Size = new System.Drawing.Size(150, 29);
             this.txtPasswordLoginStudent.TabIndex = 14;
             this.txtPasswordLoginStudent.UseSystemPasswordChar = true;
+            this.txtPasswordLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // txtEmailLoginStudent
             // 
@@ -101,6 +102,7 @@ namespace eUcionica.RegistryLoginForm
             this.txtEmailLoginStudent.Name = "txtEmailLoginStudent";
             this.txtEmailLoginStudent.Size = new System.Drawing.Size(150, 29);
             this.txtEmailLoginStudent.TabIndex = 13;
+            this.txtEmailLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // StudentLogin
             // 

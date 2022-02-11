@@ -63,5 +63,45 @@ namespace eUcionica
             collection.Insert(student);
         }
 
+        public Student GetStudent(string email, string password)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+
+            var studentCollection = db.GetCollection("students");
+
+            var query = (from Student in studentCollection.AsQueryable<Student>()
+                         where Student.Email == email && Student.Password == password
+                         select Student).FirstOrDefault();
+
+            return query;
+        }
+
+        public void AddTest(String questions, String answers, DateTime date, Professor professor)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("dbSchool");
+            MongoDBRef m = new MongoDBRef("professors", professor.Id);
+
+            var collection = db.GetCollection<Test>("tests");
+
+            Test test = new Test
+            {
+                Date = date,
+                Professor = m,
+                Questions = questions,
+                Answers = answers
+            };
+
+            collection.Insert(test);
+
+            var vcollection = db.GetCollection<Professor>("professors");
+
+            professor.Tests.Add(new MongoDBRef("tests", test.Id));
+
+            vcollection.Save(professor);
+        }
     }
 }

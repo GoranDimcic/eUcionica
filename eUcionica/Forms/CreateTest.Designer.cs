@@ -49,6 +49,7 @@ namespace eUcionica.Forms
             this.btnAddTest.TabIndex = 38;
             this.btnAddTest.Text = "AddTest";
             this.btnAddTest.UseVisualStyleBackColor = true;
+            this.btnAddTest.Click += new System.EventHandler(this.btnAddTest_Click);
             // 
             // txtAnswers
             // 
@@ -120,6 +121,7 @@ namespace eUcionica.Forms
             // 
             this.textBox1.Location = new System.Drawing.Point(81, 50);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 39;
             // 

@@ -23,7 +23,7 @@ namespace eUcionica.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CreateTest form = new CreateTest();
+            CreateTest form = new CreateTest(loggedProfessor);
             form.ShowDialog();
         }
     }
