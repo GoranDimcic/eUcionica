@@ -25,27 +25,28 @@ namespace eUcionica.RegistryLoginForm
         {
             DataProvider data = new DataProvider();
 
-            if (txtEmailLoginStudent.Text == "")
+            if (TxtEmailLoginStudent.Text == "")
             {
                 MessageBox.Show("You didn't enter an email, try again!");
             }
-            else if (txtPasswordLoginStudent.Text == "")
+            else if (TxtPasswordLoginStudent.Text == "")
             {
                 MessageBox.Show("You didn't enter a password, try again!");
             }
             else
             {
-                student = data.GetStudent(txtEmailLoginStudent.Text, txtPasswordLoginStudent.Text);
+                student = data.GetStudent(TxtEmailLoginStudent.Text, TxtPasswordLoginStudent.Text);
 
                 if (student == null)
                 {
                     MessageBox.Show("Incorrect login, try again!");
-                    txtEmailLoginStudent.Text = "";
-                    txtPasswordLoginStudent.Text = "";
+                    TxtEmailLoginStudent.Text = "";
+                    TxtPasswordLoginStudent.Text = "";
                 }
                 else
                 {
                     Work form = new Work(student);
+                    DialogResult = DialogResult.OK;
                     form.ShowDialog();
                 }
             }

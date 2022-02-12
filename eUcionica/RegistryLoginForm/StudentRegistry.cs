@@ -22,7 +22,7 @@ namespace eUcionica.RegistryLoginForm
             if (Validation())
             {
                 DataProvider data = new DataProvider();
-                data.AddStudent(txtEmailStudent.Text, txtPasswordStudent.Text, txtNameStudent.Text);
+                data.AddStudent(TxtEmailStudent.Text, TxtPasswordStudent.Text, TxtNameStudent.Text);
 
                 DialogResult = DialogResult.OK;
             }
@@ -32,7 +32,7 @@ namespace eUcionica.RegistryLoginForm
 
         private bool Validation()
         {
-            if (txtNameStudent.Text.Equals("") || txtEmailStudent.Text.Equals("") || txtPasswordStudent.Text.Equals(""))
+            if (TxtNameStudent.Text.Equals("") || TxtEmailStudent.Text.Equals("") || TxtPasswordStudent.Text.Equals(""))
                 return false;
             return true;
         }

@@ -33,8 +33,8 @@ namespace eUcionica.RegistryLoginForm
             this.BtnLoginAsStudent = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtPasswordLoginStudent = new System.Windows.Forms.TextBox();
-            this.txtEmailLoginStudent = new System.Windows.Forms.TextBox();
+            this.TxtPasswordLoginStudent = new System.Windows.Forms.TextBox();
+            this.TxtEmailLoginStudent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblLoginStudent
@@ -85,24 +85,24 @@ namespace eUcionica.RegistryLoginForm
             this.lblEmail.TabIndex = 15;
             this.lblEmail.Text = "E-mail";
             // 
-            // txtPasswordLoginStudent
+            // TxtPasswordLoginStudent
             // 
-            this.txtPasswordLoginStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordLoginStudent.Location = new System.Drawing.Point(171, 175);
-            this.txtPasswordLoginStudent.Name = "txtPasswordLoginStudent";
-            this.txtPasswordLoginStudent.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordLoginStudent.TabIndex = 14;
-            this.txtPasswordLoginStudent.UseSystemPasswordChar = true;
-            this.txtPasswordLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
+            this.TxtPasswordLoginStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPasswordLoginStudent.Location = new System.Drawing.Point(171, 175);
+            this.TxtPasswordLoginStudent.Name = "TxtPasswordLoginStudent";
+            this.TxtPasswordLoginStudent.Size = new System.Drawing.Size(150, 29);
+            this.TxtPasswordLoginStudent.TabIndex = 14;
+            this.TxtPasswordLoginStudent.UseSystemPasswordChar = true;
+            this.TxtPasswordLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
-            // txtEmailLoginStudent
+            // TxtEmailLoginStudent
             // 
-            this.txtEmailLoginStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailLoginStudent.Location = new System.Drawing.Point(171, 125);
-            this.txtEmailLoginStudent.Name = "txtEmailLoginStudent";
-            this.txtEmailLoginStudent.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailLoginStudent.TabIndex = 13;
-            this.txtEmailLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
+            this.TxtEmailLoginStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmailLoginStudent.Location = new System.Drawing.Point(171, 125);
+            this.TxtEmailLoginStudent.Name = "TxtEmailLoginStudent";
+            this.TxtEmailLoginStudent.Size = new System.Drawing.Size(150, 29);
+            this.TxtEmailLoginStudent.TabIndex = 13;
+            this.TxtEmailLoginStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // StudentLogin
             // 
@@ -113,8 +113,8 @@ namespace eUcionica.RegistryLoginForm
             this.Controls.Add(this.BtnLoginAsStudent);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtPasswordLoginStudent);
-            this.Controls.Add(this.txtEmailLoginStudent);
+            this.Controls.Add(this.TxtPasswordLoginStudent);
+            this.Controls.Add(this.TxtEmailLoginStudent);
             this.Name = "StudentLogin";
             this.Text = "StudentLogin";
             this.ResumeLayout(false);
@@ -128,7 +128,7 @@ namespace eUcionica.RegistryLoginForm
         private System.Windows.Forms.Button BtnLoginAsStudent;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtPasswordLoginStudent;
-        private System.Windows.Forms.TextBox txtEmailLoginStudent;
+        private System.Windows.Forms.TextBox TxtPasswordLoginStudent;
+        private System.Windows.Forms.TextBox TxtEmailLoginStudent;
     }
 }

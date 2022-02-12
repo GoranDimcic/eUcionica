@@ -25,9 +25,10 @@ namespace eUcionica.Forms
 
         private void BtnAddTest_Click_1(object sender, EventArgs e)
         {
-            DataProvider d = new DataProvider();
+            DataProvider data = new DataProvider();
 
-            d.AddTest(TxtQuestions.Text, TxtAnswers.Text, System.DateTime.Parse(DateTime.Text), TxtTestName.Text, LoggedProfessor);
+            data.AddTest(TxtQuestions.Text, TxtAnswers.Text, System.DateTime.Parse(DateTime.Text), TxtTestName.Text, LoggedProfessor);
+            DialogResult = DialogResult.OK;
         }
     }
 }

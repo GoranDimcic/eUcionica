@@ -22,20 +22,26 @@ namespace eUcionica.Forms
             LoggedStudent = student;
         }
 
+        public void Clear()
+        {
+            ComboBoxTests.Items.Clear();
+        }
+
         public void FillComboBox()
         {
             DataProvider data = new DataProvider();
-            List<Test> tests = new List<Test>();
+            _ = new List<Test>();
 
-            Professor p = data.GetProfessor(ComboBoxSubjects.SelectedItem.ToString());
+            Professor professor = data.GetProfessor(ComboBoxSubjects.SelectedItem.ToString());
 
-            if (p.Tests.Count == 0)
+            if (professor.Tests.Count == 0)
             {
                 MessageBox.Show("No available tests!");
+                ComboBoxTests.Text = "";
             }
             else
             {
-                tests = data.GetTests(ComboBoxSubjects.SelectedItem.ToString());
+                List<Test> tests = data.GetTests(ComboBoxSubjects.SelectedItem.ToString());
 
                 foreach (Test test in tests)
                 {
@@ -55,6 +61,7 @@ namespace eUcionica.Forms
 
         private void ComboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Clear();
             FillComboBox();
         }
 
@@ -63,10 +70,10 @@ namespace eUcionica.Forms
             DataProvider data = new DataProvider();
             test = data.GetTest(ComboBoxTests.SelectedItem.ToString());
 
-            StudentTest st = data.GetStudentTest(test, LoggedStudent);
-            if (st != null)
+            StudentTest studentTest = data.GetStudentTest(test, LoggedStudent);
+            if (studentTest != null)
             {
-                MessageBox.Show("You already finished this test!");
+                MessageBox.Show("You have already completed this test!");
             }
             else
             {
@@ -78,6 +85,8 @@ namespace eUcionica.Forms
         {
             DataProvider data = new DataProvider();
             data.AddStudentTest(LoggedStudent, test, TxtAnswers.Text);
+
+            DialogResult = DialogResult.OK;
         }
     }
 }

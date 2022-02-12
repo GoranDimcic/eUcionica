@@ -31,10 +31,10 @@ namespace eUcionica.RegistryLoginForm
         {
             this.BtnRegistryStudent = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNameStudent = new System.Windows.Forms.TextBox();
+            this.TxtNameStudent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPasswordStudent = new System.Windows.Forms.TextBox();
-            this.txtEmailStudent = new System.Windows.Forms.TextBox();
+            this.TxtPasswordStudent = new System.Windows.Forms.TextBox();
+            this.TxtEmailStudent = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLoginStudent = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -61,14 +61,14 @@ namespace eUcionica.RegistryLoginForm
             this.label4.TabIndex = 1;
             this.label4.Text = "E-mail";
             // 
-            // txtNameStudent
+            // TxtNameStudent
             // 
-            this.txtNameStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameStudent.Location = new System.Drawing.Point(215, 200);
-            this.txtNameStudent.Name = "txtNameStudent";
-            this.txtNameStudent.Size = new System.Drawing.Size(150, 29);
-            this.txtNameStudent.TabIndex = 6;
-            this.txtNameStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
+            this.TxtNameStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNameStudent.Location = new System.Drawing.Point(215, 200);
+            this.TxtNameStudent.Name = "TxtNameStudent";
+            this.TxtNameStudent.Size = new System.Drawing.Size(150, 29);
+            this.TxtNameStudent.TabIndex = 6;
+            this.TxtNameStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // label3
             // 
@@ -81,24 +81,24 @@ namespace eUcionica.RegistryLoginForm
             this.label3.TabIndex = 3;
             this.label3.Text = "Name";
             // 
-            // txtPasswordStudent
+            // TxtPasswordStudent
             // 
-            this.txtPasswordStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordStudent.Location = new System.Drawing.Point(215, 150);
-            this.txtPasswordStudent.Name = "txtPasswordStudent";
-            this.txtPasswordStudent.Size = new System.Drawing.Size(150, 29);
-            this.txtPasswordStudent.TabIndex = 5;
-            this.txtPasswordStudent.UseSystemPasswordChar = true;
-            this.txtPasswordStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
+            this.TxtPasswordStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPasswordStudent.Location = new System.Drawing.Point(215, 150);
+            this.TxtPasswordStudent.Name = "TxtPasswordStudent";
+            this.TxtPasswordStudent.Size = new System.Drawing.Size(150, 29);
+            this.TxtPasswordStudent.TabIndex = 5;
+            this.TxtPasswordStudent.UseSystemPasswordChar = true;
+            this.TxtPasswordStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
-            // txtEmailStudent
+            // TxtEmailStudent
             // 
-            this.txtEmailStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailStudent.Location = new System.Drawing.Point(215, 100);
-            this.txtEmailStudent.Name = "txtEmailStudent";
-            this.txtEmailStudent.Size = new System.Drawing.Size(150, 29);
-            this.txtEmailStudent.TabIndex = 4;
-            this.txtEmailStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
+            this.TxtEmailStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmailStudent.Location = new System.Drawing.Point(215, 100);
+            this.TxtEmailStudent.Name = "TxtEmailStudent";
+            this.TxtEmailStudent.Size = new System.Drawing.Size(150, 29);
+            this.TxtEmailStudent.TabIndex = 4;
+            this.TxtEmailStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnterPress_KeyDown);
             // 
             // lblEmail
             // 
@@ -129,10 +129,10 @@ namespace eUcionica.RegistryLoginForm
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.BtnRegistryStudent);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNameStudent);
+            this.Controls.Add(this.TxtNameStudent);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPasswordStudent);
-            this.Controls.Add(this.txtEmailStudent);
+            this.Controls.Add(this.TxtPasswordStudent);
+            this.Controls.Add(this.TxtEmailStudent);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblLoginStudent);
             this.Name = "StudentRegistry";
@@ -146,10 +146,10 @@ namespace eUcionica.RegistryLoginForm
 
         private System.Windows.Forms.Button BtnRegistryStudent;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNameStudent;
+        private System.Windows.Forms.TextBox TxtNameStudent;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPasswordStudent;
-        private System.Windows.Forms.TextBox txtEmailStudent;
+        private System.Windows.Forms.TextBox TxtPasswordStudent;
+        private System.Windows.Forms.TextBox TxtEmailStudent;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLoginStudent;
     }

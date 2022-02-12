@@ -25,9 +25,9 @@ namespace eUcionica.Forms
         public void FillTests()
         {
             DataProvider data = new DataProvider();
-            List<Test> tests = new List<Test>();
+            _ = new List<Test>();
 
-            tests = data.GetTests(LoggedProfessor);
+            List<Test> tests = data.GetTests(LoggedProfessor);
 
             foreach (Test test in tests)
             {
@@ -63,6 +63,8 @@ namespace eUcionica.Forms
         {
             DataProvider data = new DataProvider();
             data.UpdateTest(ComboBoxTests.SelectedItem.ToString(), TxtAnswers.Text, TxtQuestions.Text);
+
+            DialogResult = DialogResult.OK;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)

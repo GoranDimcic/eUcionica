@@ -27,9 +27,9 @@ namespace eUcionica.Forms
         public void FillTest()
         {
             DataProvider data = new DataProvider();
-            List<Test> tests = new List<Test>();
+            _ = new List<Test>();
 
-            tests = data.GetTests(LoggedProfessor);
+            List<Test> tests = data.GetTests(LoggedProfessor);
 
             foreach (Test test in tests)
             {
@@ -37,16 +37,16 @@ namespace eUcionica.Forms
             }
         }
 
-        public void FillStudent(Test t)
+        public void FillStudent(Test test)
         {
             DataProvider data = new DataProvider();
-            List<Student> students = new List<Student>();
+            _ = new List<Student>();
 
-            students = data.GetStudents(t);
+            List<Student> students = data.GetStudents(test);
 
-            foreach (Student s in students)
+            foreach (Student student in students)
             {
-                ComboBoxStudents.Items.Add(s.Name);
+                ComboBoxStudents.Items.Add(student.Name);
             }
         }
 
@@ -87,6 +87,8 @@ namespace eUcionica.Forms
             DataProvider data = new DataProvider();
 
             data.UpdateGrade(test, student, Int32.Parse(ComboBoxGrade.SelectedItem.ToString()));
+
+            DialogResult = DialogResult.OK;
         }
     }
 }

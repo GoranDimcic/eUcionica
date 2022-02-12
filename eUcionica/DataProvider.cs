@@ -198,11 +198,11 @@ namespace eUcionica
 
             var testCollection = db.GetCollection("tests");
 
-            var query1 = (from test in testCollection.AsQueryable<Test>()
+            var query = (from test in testCollection.AsQueryable<Test>()
                           where test.Name == name
                           select test).FirstOrDefault();
 
-            return query1;
+            return query;
         }
 
         public List<Test> GetTests(String subject)
@@ -297,7 +297,7 @@ namespace eUcionica
             MongoDBRef student = new MongoDBRef("students", s.Id);
 
             var query = (from st in studenttestCollection.AsQueryable<StudentTest>()
-                         where st.Test == test || st.Student == student
+                         where st.Test == test && st.Student == student
                          select st.StudentAnswers).FirstOrDefault();
 
             return query;
@@ -316,7 +316,7 @@ namespace eUcionica
             MongoDBRef student1 = new MongoDBRef("students", student.Id);
 
             var query = (from st in studenttestCollection.AsQueryable<StudentTest>()
-                         where st.Test == test1 || st.Student == student1
+                         where st.Test == test1 && st.Student == student1
                          select st).FirstOrDefault();
 
             return query;
@@ -334,16 +334,16 @@ namespace eUcionica
 
             MongoDBRef student1 = new MongoDBRef("students", student.Id);
 
-            StudentTest dd = GetStudentTest(test, student);
+            StudentTest st = GetStudentTest(test, student);
 
-            var query = Query.EQ("Id", dd.Id);
+            var query = Query.EQ("Id", st.Id);
 
-            dd.Grade = ocena;
+            st.Grade = ocena;
 
-            var up = MongoDB.Driver.Builders.Update.Set("Grade", ocena);
+            var update = MongoDB.Driver.Builders.Update.Set("Grade", ocena);
 
-            studenttestCollection.Update(query, up);
-            studenttestCollection.Save(dd);
+            studenttestCollection.Update(query, update);
+            studenttestCollection.Save(st);
         }
 
         public void UpdateTest(string name, string answers, string questions)
