@@ -31,19 +31,19 @@ namespace eUcionica.Forms
         {
             this.ComboBoxTests = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAnswers = new System.Windows.Forms.TextBox();
+            this.TxtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtQuestions = new System.Windows.Forms.TextBox();
+            this.TxtQuestions = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ComboBoxTests
             // 
             this.ComboBoxTests.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxTests.FormattingEnabled = true;
-            this.ComboBoxTests.Location = new System.Drawing.Point(201, 47);
+            this.ComboBoxTests.Location = new System.Drawing.Point(150, 51);
             this.ComboBoxTests.Name = "ComboBoxTests";
             this.ComboBoxTests.Size = new System.Drawing.Size(165, 32);
             this.ComboBoxTests.TabIndex = 12;
@@ -54,84 +54,86 @@ namespace eUcionica.Forms
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 49);
+            this.label1.Location = new System.Drawing.Point(15, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "Test";
             // 
-            // txtAnswers
+            // TxtAnswers
             // 
-            this.txtAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnswers.Location = new System.Drawing.Point(579, 120);
-            this.txtAnswers.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAnswers.Multiline = true;
-            this.txtAnswers.Name = "txtAnswers";
-            this.txtAnswers.Size = new System.Drawing.Size(165, 208);
-            this.txtAnswers.TabIndex = 42;
+            this.TxtAnswers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAnswers.Location = new System.Drawing.Point(485, 100);
+            this.TxtAnswers.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtAnswers.Multiline = true;
+            this.TxtAnswers.Name = "TxtAnswers";
+            this.TxtAnswers.Size = new System.Drawing.Size(165, 200);
+            this.TxtAnswers.TabIndex = 42;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(414, 120);
+            this.label4.Location = new System.Drawing.Point(350, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 25);
             this.label4.TabIndex = 41;
             this.label4.Text = "Answers";
             // 
-            // txtQuestions
+            // TxtQuestions
             // 
-            this.txtQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuestions.Location = new System.Drawing.Point(201, 120);
-            this.txtQuestions.Margin = new System.Windows.Forms.Padding(2);
-            this.txtQuestions.Multiline = true;
-            this.txtQuestions.Name = "txtQuestions";
-            this.txtQuestions.Size = new System.Drawing.Size(165, 208);
-            this.txtQuestions.TabIndex = 40;
+            this.TxtQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtQuestions.Location = new System.Drawing.Point(150, 100);
+            this.TxtQuestions.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtQuestions.Multiline = true;
+            this.TxtQuestions.Name = "TxtQuestions";
+            this.TxtQuestions.Size = new System.Drawing.Size(165, 200);
+            this.TxtQuestions.TabIndex = 40;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 120);
+            this.label3.Location = new System.Drawing.Point(15, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 39;
             this.label3.Text = "Questions";
             // 
-            // button1
+            // BtnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(201, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 46);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdate.Location = new System.Drawing.Point(200, 350);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(150, 40);
+            this.BtnUpdate.TabIndex = 43;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // button2
+            // BtnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(384, 375);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 46);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDelete.Location = new System.Drawing.Point(400, 350);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(150, 40);
+            this.BtnDelete.TabIndex = 44;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // UpdateTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtAnswers);
+            this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.BtnDelete);
+            this.Controls.Add(this.BtnUpdate);
+            this.Controls.Add(this.TxtAnswers);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtQuestions);
+            this.Controls.Add(this.TxtQuestions);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ComboBoxTests);
             this.Controls.Add(this.label1);
@@ -146,11 +148,11 @@ namespace eUcionica.Forms
 
         private System.Windows.Forms.ComboBox ComboBoxTests;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAnswers;
+        private System.Windows.Forms.TextBox TxtAnswers;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtQuestions;
+        private System.Windows.Forms.TextBox TxtQuestions;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnUpdate;
+        private System.Windows.Forms.Button BtnDelete;
     }
 }

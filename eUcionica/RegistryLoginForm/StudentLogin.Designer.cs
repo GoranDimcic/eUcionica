@@ -55,7 +55,7 @@ namespace eUcionica.RegistryLoginForm
             this.BtnLoginAsStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLoginAsStudent.Location = new System.Drawing.Point(171, 230);
             this.BtnLoginAsStudent.Name = "BtnLoginAsStudent";
-            this.BtnLoginAsStudent.Size = new System.Drawing.Size(150, 50);
+            this.BtnLoginAsStudent.Size = new System.Drawing.Size(150, 40);
             this.BtnLoginAsStudent.TabIndex = 17;
             this.BtnLoginAsStudent.Text = "Login";
             this.BtnLoginAsStudent.UseVisualStyleBackColor = false;

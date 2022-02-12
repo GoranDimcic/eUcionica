@@ -46,7 +46,7 @@ namespace eUcionica.RegistryLoginForm
             this.BtnRegistryProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRegistryProfessor.Location = new System.Drawing.Point(215, 300);
             this.BtnRegistryProfessor.Name = "BtnRegistryProfessor";
-            this.BtnRegistryProfessor.Size = new System.Drawing.Size(150, 50);
+            this.BtnRegistryProfessor.Size = new System.Drawing.Size(150, 40);
             this.BtnRegistryProfessor.TabIndex = 9;
             this.BtnRegistryProfessor.Text = "Sign up";
             this.BtnRegistryProfessor.UseVisualStyleBackColor = true;

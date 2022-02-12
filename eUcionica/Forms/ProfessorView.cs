@@ -13,29 +13,29 @@ namespace eUcionica.Forms
 {
     public partial class ProfessorView : Form
     {
-        public Professor loggedProfessor;
+        public Professor LoggedProfessor;
 
         public ProfessorView(Professor professor)
         {
             InitializeComponent();
-            loggedProfessor = professor;
+            LoggedProfessor = professor;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void BtnCreateTest_Click(object sender, EventArgs e)
         {
-            CreateTest form = new CreateTest(loggedProfessor);
+            CreateTest form = new CreateTest(LoggedProfessor);
             form.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnGradeTest_Click(object sender, EventArgs e)
         {
-            Grade form = new Grade(loggedProfessor);
+            Grade form = new Grade(LoggedProfessor);
             form.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnUpdateTest_Click(object sender, EventArgs e)
         {
-            UpdateTest form = new UpdateTest(loggedProfessor);
+            UpdateTest form = new UpdateTest(LoggedProfessor);
             form.ShowDialog();
         }
     }

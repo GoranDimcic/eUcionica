@@ -13,12 +13,12 @@ namespace eUcionica.Forms
 {
     public partial class UpdateTest : Form
     {
-        public Professor loggedProfessor;
+        public Professor LoggedProfessor;
 
         public UpdateTest(Professor professor)
         {
             InitializeComponent();
-            loggedProfessor = professor;
+            LoggedProfessor = professor;
             FillTests();
         }
 
@@ -27,21 +27,12 @@ namespace eUcionica.Forms
             DataProvider data = new DataProvider();
             List<Test> tests = new List<Test>();
 
-            tests = data.GetTests(loggedProfessor);
+            tests = data.GetTests(LoggedProfessor);
 
             foreach (Test test in tests)
             {
                 ComboBoxTests.Items.Add(test.Name);
             }
-        }
-
-        public void FillAnswers()
-        {
-            DataProvider data = new DataProvider();
-            string answers;
-
-            answers = data.GetAnswers(ComboBoxTests.SelectedItem.ToString());
-            txtAnswers.Text = answers;
         }
 
         public void FillQuestions()
@@ -50,7 +41,16 @@ namespace eUcionica.Forms
             string questions;
 
             questions = data.GetQuestions(ComboBoxTests.SelectedItem.ToString());
-            txtQuestions.Text = questions;
+            TxtQuestions.Text = questions;
+        }
+
+        public void FillAnswers()
+        {
+            DataProvider data = new DataProvider();
+            string answers;
+
+            answers = data.GetAnswers(ComboBoxTests.SelectedItem.ToString());
+            TxtAnswers.Text = answers;
         }
 
         private void ComboBoxTests_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,13 +59,13 @@ namespace eUcionica.Forms
             FillQuestions();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             DataProvider data = new DataProvider();
-            data.UpdateTest(ComboBoxTests.SelectedItem.ToString(), txtAnswers.Text, txtQuestions.Text);
+            data.UpdateTest(ComboBoxTests.SelectedItem.ToString(), TxtAnswers.Text, TxtQuestions.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             DataProvider data = new DataProvider();
             data.DeleteTest(ComboBoxTests.SelectedItem.ToString());

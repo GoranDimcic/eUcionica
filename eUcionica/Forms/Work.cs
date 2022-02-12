@@ -13,19 +13,13 @@ namespace eUcionica.Forms
 {
     public partial class Work : Form
     {
-        public Student loggedStudent;
+        public Student LoggedStudent;
         public Test test;
 
         public Work(Student student)
         {
             InitializeComponent();
-            loggedStudent = student;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DataProvider data = new DataProvider();
-            data.AddStudentTest(loggedStudent, test, txtAnswers.Text);
+            LoggedStudent = student;
         }
 
         public void FillComboBox()
@@ -37,7 +31,7 @@ namespace eUcionica.Forms
 
             foreach (Test test in tests)
             {
-                comboBox1.Items.Add(test.Name);
+                ComboBoxTests.Items.Add(test.Name);
             }
         }
 
@@ -46,10 +40,10 @@ namespace eUcionica.Forms
             DataProvider data = new DataProvider();
             string questions;
 
-            questions = data.GetQuestions(comboBox1.SelectedItem.ToString());
-            txtQuestions.Text = questions;
+            questions = data.GetQuestions(ComboBoxTests.SelectedItem.ToString());
+            TxtQuestions.Text = questions;
 
-            test = data.GetTest(comboBox1.SelectedItem.ToString());
+            test = data.GetTest(ComboBoxTests.SelectedItem.ToString());
         }
 
         private void ComboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,9 +51,15 @@ namespace eUcionica.Forms
             FillComboBox();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxTests_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillQuestions();
+        }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            DataProvider data = new DataProvider();
+            data.AddStudentTest(LoggedStudent, test, TxtAnswers.Text);
         }
     }
 }

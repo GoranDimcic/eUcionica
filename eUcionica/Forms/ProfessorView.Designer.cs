@@ -28,60 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnCreateTest = new System.Windows.Forms.Button();
+            this.BtnGradeTest = new System.Windows.Forms.Button();
+            this.BtnUpdateTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnCreateTest
             // 
-            this.button1.Location = new System.Drawing.Point(42, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Kreiraj test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.BtnCreateTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreateTest.Location = new System.Drawing.Point(50, 100);
+            this.BtnCreateTest.Name = "BtnCreateTest";
+            this.BtnCreateTest.Size = new System.Drawing.Size(100, 50);
+            this.BtnCreateTest.TabIndex = 0;
+            this.BtnCreateTest.Text = "Create test";
+            this.BtnCreateTest.UseVisualStyleBackColor = true;
+            this.BtnCreateTest.Click += new System.EventHandler(this.BtnCreateTest_Click);
             // 
-            // button2
+            // BtnGradeTest
             // 
-            this.button2.Location = new System.Drawing.Point(175, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Oceni test";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnGradeTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGradeTest.Location = new System.Drawing.Point(200, 100);
+            this.BtnGradeTest.Name = "BtnGradeTest";
+            this.BtnGradeTest.Size = new System.Drawing.Size(100, 50);
+            this.BtnGradeTest.TabIndex = 1;
+            this.BtnGradeTest.Text = "Grade test";
+            this.BtnGradeTest.UseVisualStyleBackColor = true;
+            this.BtnGradeTest.Click += new System.EventHandler(this.BtnGradeTest_Click);
             // 
-            // button3
+            // BtnUpdateTest
             // 
-            this.button3.Location = new System.Drawing.Point(301, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Update test";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(437, 112);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 52);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Delete test";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnUpdateTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdateTest.Location = new System.Drawing.Point(350, 100);
+            this.BtnUpdateTest.Name = "BtnUpdateTest";
+            this.BtnUpdateTest.Size = new System.Drawing.Size(100, 50);
+            this.BtnUpdateTest.TabIndex = 2;
+            this.BtnUpdateTest.Text = "Update test";
+            this.BtnUpdateTest.UseVisualStyleBackColor = true;
+            this.BtnUpdateTest.Click += new System.EventHandler(this.BtnUpdateTest_Click);
             // 
             // ProfessorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 347);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(534, 261);
+            this.Controls.Add(this.BtnUpdateTest);
+            this.Controls.Add(this.BtnGradeTest);
+            this.Controls.Add(this.BtnCreateTest);
             this.Name = "ProfessorView";
             this.Text = "ProfessorView";
             this.ResumeLayout(false);
@@ -90,9 +82,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnCreateTest;
+        private System.Windows.Forms.Button BtnGradeTest;
+        private System.Windows.Forms.Button BtnUpdateTest;
     }
 }

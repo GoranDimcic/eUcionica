@@ -13,21 +13,21 @@ namespace eUcionica.Forms
 {
     public partial class CreateTest : Form
     {
-        public Professor loggedProfessor;
+        public Professor LoggedProfessor;
 
         public CreateTest(Professor professor)
         {
             InitializeComponent();
-            loggedProfessor = professor;
+            LoggedProfessor = professor;
 
-            textBox1.Text = loggedProfessor.Subject;
+            TxtProfessorSubject.Text = LoggedProfessor.Subject;
         }
 
-        private void btnAddTest_Click(object sender, EventArgs e)
+        private void BtnAddTest_Click_1(object sender, EventArgs e)
         {
             DataProvider d = new DataProvider();
 
-            d.AddTest(txtQuestions.Text, txtAnswers.Text, DateTime.Parse(date.Text), textBox2.Text, loggedProfessor);
+            d.AddTest(TxtQuestions.Text, TxtAnswers.Text, System.DateTime.Parse(DateTime.Text), TxtTestName.Text, LoggedProfessor);
         }
     }
 }
