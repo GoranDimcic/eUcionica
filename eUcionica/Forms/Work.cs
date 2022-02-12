@@ -27,11 +27,20 @@ namespace eUcionica.Forms
             DataProvider data = new DataProvider();
             List<Test> tests = new List<Test>();
 
-            tests = data.GetTests(ComboBoxSubjects.SelectedItem.ToString());
+            Professor p = data.GetProfessor(ComboBoxSubjects.SelectedItem.ToString());
 
-            foreach (Test test in tests)
+            if (p.Tests.Count == 0)
             {
-                ComboBoxTests.Items.Add(test.Name);
+                MessageBox.Show("No available tests!");
+            }
+            else
+            {
+                tests = data.GetTests(ComboBoxSubjects.SelectedItem.ToString());
+
+                foreach (Test test in tests)
+                {
+                    ComboBoxTests.Items.Add(test.Name);
+                }
             }
         }
 
@@ -42,8 +51,6 @@ namespace eUcionica.Forms
 
             questions = data.GetQuestions(ComboBoxTests.SelectedItem.ToString());
             TxtQuestions.Text = questions;
-
-            test = data.GetTest(ComboBoxTests.SelectedItem.ToString());
         }
 
         private void ComboBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,7 +60,18 @@ namespace eUcionica.Forms
 
         private void ComboBoxTests_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillQuestions();
+            DataProvider data = new DataProvider();
+            test = data.GetTest(ComboBoxTests.SelectedItem.ToString());
+
+            StudentTest st = data.GetStudentTest(test, LoggedStudent);
+            if (st != null)
+            {
+                MessageBox.Show("You already finished this test!");
+            }
+            else
+            {
+                FillQuestions();
+            }
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
